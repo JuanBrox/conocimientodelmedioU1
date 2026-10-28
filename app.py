@@ -73,6 +73,40 @@ div[data-testid="stExpander"] {
     border: 2px solid #f5d0fe;
 }
 div[data-testid="stExpander"] summary p { font-weight: 800; font-size: 1.1rem; }
+
+/* ── Colores forzados: legibles aunque el navegador esté en modo oscuro ── */
+.stApp, .stApp p, .stApp span, .stApp label, .stApp li, .stApp td, .stApp th,
+.stApp h1, .stApp h2, .stApp h3, .stApp div[data-testid="stMarkdownContainer"],
+.stApp div[data-testid="stCaptionContainer"], .stApp summary {
+    color: #4a2c6d;
+}
+.hero h1 { color: transparent; }
+.stButton > button, .stButton > button p, .stButton > button span {
+    color: #ffffff !important;
+}
+div[data-testid="stRadio"] label {
+    background: #ffffff; border: 2px solid #f0abfc; border-radius: 999px;
+    padding: 4px 16px; margin: 2px 4px 2px 0;
+}
+div[data-testid="stRadio"] label p, div[data-testid="stRadio"] label span {
+    color: #4a2c6d !important;
+}
+div[data-testid="stRadio"] label:has(input:checked) {
+    background: #fae8ff; border-color: #c026d3;
+}
+div[data-baseweb="select"] > div { background: #ffffff; color: #4a2c6d; border-color: #f0abfc; }
+div[data-baseweb="select"] span, div[data-baseweb="select"] input { color: #4a2c6d !important; }
+div[data-baseweb="popover"] ul, div[data-baseweb="popover"] li {
+    background: #ffffff !important; color: #4a2c6d !important;
+}
+div[data-testid="stAlert"] { background: #ffffff; border: 2px solid #f0abfc; border-radius: 16px; }
+div[data-testid="stAlert"] p, div[data-testid="stAlert"] span { color: #4a2c6d !important; }
+div[data-testid="stExpander"] details, div[data-testid="stExpander"] summary {
+    background: rgba(255,255,255,.9); color: #4a2c6d;
+}
+.stApp table { background: #ffffff; border-radius: 12px; }
+.stApp td, .stApp th { border-color: #f0abfc !important; }
+div[data-testid="stProgress"] p { color: #4a2c6d !important; }
 """
 st.markdown("<style>" + CSS + "</style>", unsafe_allow_html=True)
 st.markdown(
